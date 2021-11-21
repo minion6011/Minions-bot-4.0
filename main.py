@@ -26,12 +26,12 @@ def store_device_auth_details(email, details):
     with open("auths.json", 'w') as fp:
         json.dump(existing, fp)
 
-device_auth_details = get_device_auth_details().get("minionsbot56@gmail.com", {})
+device_auth_details = get_device_auth_details().get("your email", {})
 bot = commands.Bot(
   command_prefix="!",
   auth=fortnitepy.AdvancedAuth(
-        email="minionsbot56@gmail.com",
-        password="negatina12#",
+        email="your email",
+        password="your password",
         prompt_authorization_code=True,
         prompt_code_if_invalid=True,
         delete_existing_device_auths=True,
@@ -47,7 +47,7 @@ async def event_device_auth_generate(details, email):
 
 @bot.event
 async def event_ready():
-  await client.start("NzgwNTE0MzgxMjA5MTQxMjU4.X7wMqQ.91Ug60Wgf0-LCG201uh4A6uGC44")    
+  await client.start("Your discord token")    
  
 
 @bot.event
